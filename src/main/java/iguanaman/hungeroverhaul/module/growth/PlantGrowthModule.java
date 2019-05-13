@@ -77,7 +77,7 @@ public class PlantGrowthModule
         }
 
         // sunlight
-        float sunlightModifier = !growthModification.needsSunlight || (growthModification.needsSunlight && event.getWorld().isDaytime() && event.getWorld().canSeeSky(event.getPos())) ? 1 : Config.noSunlightRegrowthMultiplier;
+        float sunlightModifier = !growthModification.needsSunlight || (growthModification.needsSunlight && event.getWorld().canSeeSky(event.getPos())) ? 1 : Config.noSunlightRegrowthMultiplier;
         if (sunlightModifier == 0)
         {
             event.setResult(Result.DENY);
